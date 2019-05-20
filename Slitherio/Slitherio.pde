@@ -21,7 +21,8 @@ class Food extends Thing{
     super(x,y,(int)random(225),(int)random(225),(int)random(225));
   }
   void display(){
-    circle(this.x,this.y,25);
+    fill(R,G,B);
+    circle(this.x,this.y,15);
   }
 }
 
@@ -31,7 +32,7 @@ void setup(){
   size(1000,650);
   toDisplay = new ArrayList<Displayable>();
   for (int i = 0; i < 20; i++){
-    Food f = new Food(random(height), random(width));
+    Food f = new Food(25+random(height*2), 25+random(width*2));
     toDisplay.add(f);
   }
 }
