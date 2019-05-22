@@ -9,4 +9,10 @@ class SnakePart extends Thing implements Moveable{
   }
   void move(){
   }
+  float getX(){
+    return x;
+  }
+  float getY(){
+    return y;
+  }
 }
