@@ -7,11 +7,11 @@ class Snake extends Thing implements Moveable{
     SnakePart head = new SnakePart(mouseX,mouseY,R,G,B);
     parts.add(head);
     for (int i = 0; i < 9; i++){
-      SnakePart sp = new SnakePart(parts.get(i).getX(),parts.get(i).getY(),R,G,B);
+      SnakePart sp = new SnakePart(parts.get(i).getX()+1,parts.get(i).getY()+1,R,G,B);
       parts.add(sp);
     }
     for (int i = 0; i < parts.size(); i++){
-      parts.get(i);
+      parts.get(i).display();
     }
   }
   void move(){

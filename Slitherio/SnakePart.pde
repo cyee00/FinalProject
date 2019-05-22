@@ -5,7 +5,7 @@ class SnakePart extends Thing implements Moveable{
   }
   void display(){
     fill(R,G,B);
-    circle(this.x,this.y,partsize);
+    ellipse(this.x,this.y,partsize, partsize/2);
   }
   void move(){
   }
