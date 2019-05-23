@@ -24,3 +24,6 @@
   * Started working on Snake class.
   * Realized I needed to access each SnakePart's x and y. Added getX() and getY() to SnakePart class.
   * Changed each SnakePart from circle to ellipse 'cause it looks more snake-like.
+  * Worked on moving the Snake. Couldn't get it to work quite right.
+
+#### &#x1F538; Day 5
