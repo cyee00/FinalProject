@@ -6,7 +6,8 @@ void setup(){
   toDisplay = new ArrayList<Displayable>();
   toMove = new ArrayList<Moveable>();
   //for (int i = 0; i < 10; i++){
-  Snake snake = new Snake(25+random(height), 25+random(width));
+  //Snake snake = new Snake(25+random(height), 25+random(width));
+  Snake snake = new Snake(height/100,width/100);
   toDisplay.add(snake);
   toMove.add(snake);
   //}
