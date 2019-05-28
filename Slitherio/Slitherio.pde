@@ -7,14 +7,15 @@ void setup(){
   toMove = new ArrayList<Moveable>();
   //for (int i = 0; i < 10; i++){
   //Snake snake = new Snake(25+random(height), 25+random(width));
-  Snake snake = new Snake(height/100,width/100);
-  toDisplay.add(snake);
+  Snake snake = new Snake(mouseX+100,mouseY+100);
+  //toDisplay.add(snake);
   toMove.add(snake);
   //}
   for (int i = 0; i < 20; i++){
     Food f = new Food(25+random(height), 25+random(width));
     toDisplay.add(f);
   }
+  //noLoop();
 }
 
 void draw(){
