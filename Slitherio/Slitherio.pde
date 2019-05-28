@@ -5,12 +5,9 @@ void setup(){
   size(1000,650);
   toDisplay = new ArrayList<Displayable>();
   toMove = new ArrayList<Moveable>();
-  //for (int i = 0; i < 10; i++){
-  //Snake snake = new Snake(25+random(height), 25+random(width));
-  Snake snake = new Snake(mouseX+100,mouseY+100);
+  Snake snake = new Snake(height/2,width/2);
   toDisplay.add(snake);
   toMove.add(snake);
-  //}
   for (int i = 0; i < 20; i++){
     Food f = new Food(25+random(height), 25+random(width));
     toDisplay.add(f);
