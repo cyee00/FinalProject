@@ -7,10 +7,10 @@ class Snake extends Thing implements Moveable{
     show = this.x==other.x && this.y==other.y;
   }
   void display(){
-    SnakePart head = new SnakePart(x,y,R,G,B);
+    SnakePart head = new SnakePart(x,y,R,G,B,.1);
     parts.add(head);
     for (int i = 0; i < 9; i++){
-      SnakePart sp = new SnakePart(parts.get(i).getX()+10,parts.get(i).getY()+10,R,G,B);
+      SnakePart sp = new SnakePart(parts.get(i).getX()+10,parts.get(i).getY()+10,R,G,B,.1+(.1*(i+1)));
       parts.add(sp);
     }
     for (int i = 0; i < parts.size(); i++){
@@ -19,7 +19,10 @@ class Snake extends Thing implements Moveable{
   }
   float diff = 0.1;
   void move(){
-    float targetx = mouseX;
+    for (int i=0; i < parts.size(); i++){
+      parts.get(i).move();
+    }
+    /*float targetx = mouseX; 
     float currentx = targetx - x;
     x += currentx * diff;
     
@@ -27,6 +30,6 @@ class Snake extends Thing implements Moveable{
     float currenty = targety - y;
     y += currenty * diff;
     
-    circle(x,y,30);
+    circle(x,y,30);*/
   }
 }

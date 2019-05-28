@@ -8,7 +8,7 @@ void setup(){
   //for (int i = 0; i < 10; i++){
   //Snake snake = new Snake(25+random(height), 25+random(width));
   Snake snake = new Snake(mouseX+100,mouseY+100);
-  //toDisplay.add(snake);
+  toDisplay.add(snake);
   toMove.add(snake);
   //}
   for (int i = 0; i < 20; i++){
