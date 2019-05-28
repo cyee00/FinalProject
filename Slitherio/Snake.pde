@@ -3,6 +3,9 @@ class Snake extends Thing implements Moveable{
   public Snake(float x, float y){
     super(x,y,(int)random(225),(int)random(225),(int)random(225));
   }
+  void touching(Thing other){
+    show = this.x==other.x && this.y==other.y;
+  }
   void display(){
     SnakePart head = new SnakePart(x,y,R,G,B);
     parts.add(head);
