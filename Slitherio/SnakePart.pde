@@ -7,7 +7,6 @@ class SnakePart extends Thing implements Moveable{
   }
   void display(){
     fill(R,G,B);
-    circle(x,y,partsize);
   }
   void move(){
     float targetx = mouseX;
