@@ -19,6 +19,8 @@ void draw(){
   background(255); //make background white
   for (Displayable obj : toDisplay){
     obj.display();
+    if (obj.getClass()==Food.class){
+    }
   }
   for (Moveable obj : toMove){
     obj.move();
