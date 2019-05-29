@@ -17,11 +17,14 @@ void setup(){
 
 void draw(){
   background(255); //make background white
+  Food Food = new Food(0,0);
   for (Displayable obj : toDisplay){
     obj.display();
-    if (obj.getClass()==Food.class){
-    }
+    /*if (obj.getClass()==Food.class){
+      obj.touching(snake);
+    }*/
   }
+  loop();
   for (Moveable obj : toMove){
     obj.move();
   }

@@ -9,14 +9,14 @@ class Snake extends Thing implements Moveable{
   void display(){
     SnakePart head = new SnakePart(x,y,R,G,B,.1);
     parts.add(head);
-    for (int i = 0; i < 5; i++){
-      SnakePart sp = new SnakePart(parts.get(i).getX()+10,parts.get(i).getY()+10,R,G,B,.1+(.05*(i+1)));
+    for (int i = 0; i < 4; i++){
+      SnakePart sp = new SnakePart(parts.get(i).getX()+10,parts.get(i).getY()+10,R,G,B,.2+(.1*(i+1)));
       parts.add(sp);
     }
     for (int i = 0; i < parts.size(); i++){
       parts.get(i).display();
     }
-    //noLoop();
+    noLoop();
   }
   void move(){
     for (int i = 0; i < parts.size(); i++){
