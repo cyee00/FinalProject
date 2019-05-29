@@ -42,3 +42,6 @@
   * I also started programming the food being eaten (i.e. Snake touching Food), but couldn't get it working right.
 
 #### Day 8
+  * Continued trying to work on the Snake movement.
+  * Found the source of the problem to be the looping of SnakePart's display(). Tried using loop() and noLoop(), but
+    didn't work.
