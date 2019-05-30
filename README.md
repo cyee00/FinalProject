@@ -45,3 +45,8 @@
   * Continued trying to work on the Snake movement.
   * Found the source of the problem to be the looping of SnakePart's display(). Tried using loop() and noLoop(), but
     didn't work.
+
+#### Day 9
+  * Finally figured out how to get Snake to display somewhat correctly by moving its display() to setup()!
+  * Unfortunately it wasn't completely working properly because the parts clustered all together.
+  * Started working on making the Snake die when it touches edge of screen.
