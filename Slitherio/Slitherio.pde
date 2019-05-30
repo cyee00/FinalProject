@@ -6,7 +6,8 @@ void setup(){
   toDisplay = new ArrayList<Displayable>();
   toMove = new ArrayList<Moveable>();
   Snake snake = new Snake(height/2,width/2);
-  toDisplay.add(snake);
+  snake.display();
+  //toDisplay.add(snake);
   toMove.add(snake);
   for (int i = 0; i < 20; i++){
     Food f = new Food(25+random(height), 25+random(width));
@@ -24,7 +25,7 @@ void draw(){
       obj.touching(snake);
     }*/
   }
-  loop();
+  //loop();
   for (Moveable obj : toMove){
     obj.move();
   }
