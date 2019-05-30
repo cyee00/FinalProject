@@ -8,9 +8,20 @@ class SnakePart extends Thing implements Moveable{
   void display(){
     fill(R,G,B);
   }
-  float getPartsize(){
-    return partsize;
+  void test(){ // for testing purposes
+    fill(255);
   }
+  void dead(){
+     if (x>width-partsize||x<partsize){
+        test();
+      }
+      if (y>height-partsize||y<partsize){
+        test();
+      }
+    }
+  /*float getPartsize(){
+    return partsize;
+  }*/
   void move(){
     float targetx = mouseX;
     float currentx = targetx - x;

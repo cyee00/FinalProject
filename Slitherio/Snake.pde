@@ -3,11 +3,17 @@ class Snake extends Thing implements Moveable{
   public Snake(float x, float y){
     super(x,y,(int)random(225),(int)random(225),(int)random(225));
   }
-  boolean dead(SnakePart part){
+  /*void dead(){
     //show = this.x==other.x && this.y==other.y;
-    if (x>width-part.getPartsize()||x<part.getPartsize()){
+    for (SnakePart part : parts){
+      if (x>width-part.getPartsize()||x<part.getPartsize()){
+        part.test();
+      }
+      if (y>height-part.getPartsize()||y<part.getPartsize()){
+        part.test();
+      }
     }
-  }
+  }*/
   void display(){
     SnakePart head = new SnakePart(x,y,R+100,G+100,B+100,1);
     parts.add(head);
@@ -23,6 +29,7 @@ class Snake extends Thing implements Moveable{
   void move(){
     for (int i = 0; i < parts.size(); i++){
       parts.get(i).move();
+      parts.get(i).dead();
     }
   }
 }
