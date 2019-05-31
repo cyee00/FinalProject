@@ -18,7 +18,7 @@ class Snake extends Thing implements Moveable{
   }
   void move(){
     for (int i = 0; i < parts.size(); i++){
-      parts.get(i).move();
+      parts.get(i).move(coordinates.get(i)[0],coordinates.get(i)[1]);
       parts.get(i).dead();
     }
   }
