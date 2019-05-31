@@ -8,7 +8,7 @@ class Food extends Thing{
       circle(this.x,this.y,15);
     }
   }
-  void touching(Snake snake){
+  void eaten(Snake snake){
     show = this.x==snake.x && this.y==snake.y;
   }
 }

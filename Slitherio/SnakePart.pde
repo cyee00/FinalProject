@@ -14,10 +14,9 @@ class SnakePart extends Thing implements Moveable{
   void dead(){
      if (x>width-partsize||x<partsize){
         test();
-      }
-      if (y>height-partsize||y<partsize){
+      } else if (y>height-partsize||y<partsize){
         test();
-      }
+      } //else if (
     }
   /*float getPartsize(){
     return partsize;
