@@ -1,7 +1,9 @@
 class Snake extends Thing implements Moveable{
   ArrayList<SnakePart> parts = new ArrayList<SnakePart>();
+  ArrayList<int[]> coordinates;
   public Snake(float x, float y){
     super(x,y,(int)random(225),(int)random(225),(int)random(225));
+    coordinates = new ArrayList<int[]>();
   }
   void display(){
     SnakePart head = new SnakePart(x,y,R+100,G+100,B+100,.5);
