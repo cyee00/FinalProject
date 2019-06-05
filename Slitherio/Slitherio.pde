@@ -24,9 +24,11 @@ void draw(){
   for (int i=0;i<food.size();i++){
     textSize(50);
     if (snake.touching(food.get(i))){
-      text("testing: touching: "+snake.touching(food.get(i)),100,300);food.remove(i);  
+      text("testing: touching: "+snake.touching(food.get(i)),100,300);
+      food.get(i).hide();
+      food.remove(i);  
       Food newFood = new Food(random(height+200), random(width+450));
-      food.add(food.size(),newFood);
+      food.add(newFood);
     }
     /*if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
       food.remove(i);  
