@@ -9,14 +9,14 @@ class Snake extends Thing{
     float[] firstcoords = new float[2];
     firstcoords[0]=x;
     firstcoords[1]=y;
-    coordinates.add(firstcoords);
-    for (int i=0;i<9;i++){ //other 9 units of the snake
-      SnakePart part = new SnakePart(20*i+x,20*i+y,R,G,B);//set coords of new part according to prev one
+    coordinates.add(firstcoords); //insert coords of snake head first
+    for (int i=0;i<15;i++){ //other units of the snake
+      SnakePart part = new SnakePart(20*i+x,20*i+y,R,G,B);//init rest of snake, set coords of new part according to prev one
       parts.add(part);
       float[] coords = new float[2];
       coords[0]=part.x;
       coords[1]=part.y;
-      coordinates.add(coords);
+      coordinates.add(coords); //insert coords of new part
     }
   }
   
@@ -36,5 +36,14 @@ class Snake extends Thing{
     newcoords[1]=y;
     coordinates.add(0,newcoords);
     coordinates.remove(coordinates.size()-1);
+  }
+  
+  boolean dead(){
+    for (int i=0;i<parts.size();i++){
+      if (parts.get(i).dead()){
+        return true;
+      }
+    }
+    return false;
   }
 }

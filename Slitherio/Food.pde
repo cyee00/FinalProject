@@ -7,10 +7,13 @@ class Food extends Thing{
     if (show){
       circle(this.x,this.y,15);
     } else {
-      fill(0,0,0);
     }
   }
-  void eaten(Snake snake){
-    show = this.x==snake.x && this.y==snake.y;
+  boolean eaten(Snake snake){
+    if (this.x==snake.x && this.y==snake.y){
+      show=false;
+      return false;
+    }
+    return true;
   }
 }
