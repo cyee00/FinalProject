@@ -5,8 +5,16 @@ This is a recreation of the popular game Slither.io. The user controls a snake u
 and tries to consume all the Food. Once they consume all of it, they win! There is a tracker of
 how much food is left in the bottom right.
 
-## Directions
+The game revolves around two major objects, the Snake and Food. The Snake is made up of 15 individual
+SnakeParts and contains two ArrayLists, one to house the Parts and one for the coordinates. All
+individual classes extend from the Thing class.
 
+## Directions
+1. Clone into the repo
+2. Open Slitherio.pde
+3. Run it
+4. Use the mouse to control the Snake and try to "eat" as much food as possible
+5. Once you eat everything, you win!
 
 ## Development Log
 #### Monday, May 21st
