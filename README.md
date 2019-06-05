@@ -59,3 +59,5 @@
 #### Tuesday, June 4th
   * Continued working on keeping track of coordinates. Finally got Snake to move like I wanted it to!
   * Decided on appropriate framerate to make it move how I wanted it to.
+  * Had to abandon snake dying after when it sides of window because there wasn't enough time.
+  * 
