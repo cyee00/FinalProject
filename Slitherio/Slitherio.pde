@@ -1,6 +1,7 @@
 ArrayList<Displayable> toDisplay;
 ArrayList<Food> food;
 Snake snake = new Snake(height/2,width/2);
+int foodLeft = 70;
 
 void setup(){
   frameRate(15); //set framerate optimal for snake movement
@@ -8,8 +9,9 @@ void setup(){
   toDisplay = new ArrayList<Displayable>();
   food = new ArrayList<Food>();
   snake.display();
-  for (int i = 0; i < 70; i++){
-    Food f = new Food(random(height+200), random(width+450));//generate 20 pieces of food at random places
+  for (int i = 0; i < 70; i++){//randomly generate pieces of food
+    //Food f = new Food(random(height+200), random(width+450));//generate 20 pieces of food at random places
+    Food f = new Food(random(width), random(height));
     toDisplay.add(f);
     food.add(f);
   }
@@ -22,13 +24,12 @@ void draw(){
   }
   snake.move(mouseX,mouseY);
   for (int i=0;i<food.size();i++){
-    textSize(50);
+    textSize(30);
     if (snake.touching(food.get(i))){
-      text("testing: touching: "+snake.touching(food.get(i)),100,300);
+      //text("testing: touching: "+snake.touching(food.get(i)),100,300);
       food.get(i).hide();
-      food.remove(i);  
-      Food newFood = new Food(random(height+200), random(width+450));
-      food.add(newFood);
+      food.remove(i);
+      foodLeft--;
     }
     /*if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
       food.remove(i);  
@@ -36,4 +37,5 @@ void draw(){
       food.add(food.size(),newFood);
     }*/
   }
+  text("Snakes left: "+foodLeft,750,600);
 }
