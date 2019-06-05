@@ -31,11 +31,11 @@ void draw(){
       food.remove(i);
       foodLeft--;
     }
-    /*if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
-      food.remove(i);  
-      Food newFood = new Food(random(height+200), random(width+450));
-      food.add(food.size(),newFood);
-    }*/
+  }
+  if (foodLeft==0){
+    //textSize(50);
+    text("YOU WON!",width/2-100,height/2-100);
+    noLoop();
   }
   text("Snakes left: "+foodLeft,750,600);
 }

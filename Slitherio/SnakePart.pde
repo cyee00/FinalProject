@@ -1,5 +1,5 @@
 class SnakePart extends Thing{
-  float partsize = 30; //spawn size set at 30\
+  float partsize = 30; //default spawn size s\et at 30
   SnakePart(float x, float y, int red, int green, int blue){
     super(x,y,red,green,blue);
   }
