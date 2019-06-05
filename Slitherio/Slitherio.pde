@@ -21,14 +21,15 @@ void draw(){
     obj.display();
   }
   snake.move(mouseX,mouseY);//make snake move by following mouse
-  /*if (snake.dead()){//check if snake has hit the walls of the window
+  if (snake.dead()){//check if snake has hit the walls of the window
     text("YOU HAVE DIED",height/2,width/2);
     noLoop();//stop the code if snake has died
-  }*/
+  }
   for (int i=0;i<food.size();i++){
     textSize(50);
     text("testing: touching: "+food.get(i).touching(snake),100, 300);
-    if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
+    //if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
+    if (mouseX==0||mouseX==width||mouseY==0||mouseY==height){
       food.remove(i);  
       Food newFood = new Food(random(height+200), random(width+450));
       food.add(food.size(),newFood);

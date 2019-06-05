@@ -2,10 +2,6 @@ interface Displayable{ //to keep everything that needs to be displayed organized
   void display();
 }
 
-/*interface Moveable{ //to keep everything that needs to move organized
-  void move();
-}*/
-
 abstract class Thing implements Displayable{
   float x,y; //coordinates of the Thing
   boolean show=true; //by default, Thing still alive and shows, has not been eaten 

@@ -38,10 +38,8 @@ class Snake extends Thing{
   }
   
   boolean dead(){
-    for (int i=0;i<parts.size();i++){
-      if (parts.get(i).dead()){
-        return true;
-      }
+    if (parts.get(0).x==0||parts.get(0).x==height||parts.get(0).y==0||parts.get(0).x==width){
+      return true;
     }
     return false;
   }
