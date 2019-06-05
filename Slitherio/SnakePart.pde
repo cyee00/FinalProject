@@ -1,9 +1,9 @@
 class SnakePart extends Thing implements Moveable{
   float partsize = 30; //spawn size set at 30
   float diff;
-  SnakePart(float x, float y, int red, int green, int blue, float difference){
+  SnakePart(float x, float y, int red, int green, int blue){//, float difference){
     super(x,y,red,green,blue);
-    diff=difference;
+    //diff=difference;
   }
   void display(){
     fill(R,G,B);
