@@ -34,13 +34,6 @@ class Snake extends Thing{
     newcoords[0]=x;
     newcoords[1]=y;
     coordinates.add(0,newcoords);//add new set of coordinates to front so head can go there
-    coordinates.remove(coordinates.size()-1);//cut off the end of the coordinates
-  }
-  
-  boolean dead(){
-    if (parts.get(0).x==0||parts.get(0).x==height||parts.get(0).y==0||parts.get(0).x==width){
-      return true;
-    }
-    return false;
+    coordinates.remove(coordinates.size()-1);//cut off the last coordinates bc they won't be used anymore
   }
 }
