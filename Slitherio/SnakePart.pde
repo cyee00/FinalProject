@@ -1,4 +1,4 @@
-class SnakePart extends Thing implements Moveable{
+class SnakePart extends Thing{
   float partsize = 30; //spawn size set at 30
   float diff;
   SnakePart(float x, float y, int red, int green, int blue){//, float difference){
@@ -18,12 +18,8 @@ class SnakePart extends Thing implements Moveable{
         test();
       } //else if (
     }
-  /*float getPartsize(){
-    return partsize;
-  }*/
-  void move(){}
-  void move(float xcor, float ycor){
-    
+  void move(float[]coords){
+    circle(coords[0],coords[1],partsize);
   }
   float getX(){
     return x;

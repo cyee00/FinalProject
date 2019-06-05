@@ -1,10 +1,10 @@
 ArrayList<Displayable> toDisplay;
 ArrayList<Food> food;
-ArrayList<Moveable> toMove;
+//ArrayList<Moveable> toMove;
 Snake snake = new Snake(height/2,width/2);
 
 void setup(){
-  frameRate(10);
+  frameRate(13.5);
   size(1000,650);
   toDisplay = new ArrayList<Displayable>();
   //toMove = new ArrayList<Moveable>();
@@ -23,10 +23,7 @@ void draw(){
   for (Displayable obj : toDisplay){
     obj.display();
   }
-  /*for (Moveable obj : toMove){
-    obj.move();
-  }*/
-  snake.move();
+  snake.move(mouseX,mouseY);
   /*for (Food f : food){
     f.eaten(snake);
   }*/

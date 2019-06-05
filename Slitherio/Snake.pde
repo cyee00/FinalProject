@@ -1,4 +1,4 @@
-class Snake extends Thing implements Moveable{
+class Snake extends Thing{
   ArrayList<SnakePart> parts = new ArrayList<SnakePart>();//holds the snakeparts of the snake
   ArrayList<float[]> coordinates = new ArrayList<float[]>();//holds coordinates of where snakeparts should go
   
@@ -26,10 +26,15 @@ class Snake extends Thing implements Moveable{
     }
   }
   
-  void move(){
+  void move(float x,float y){
     for (int i = 0; i < parts.size(); i++){
-      parts.get(i).move();
+      parts.get(i).move(coordinates.get(i));
       parts.get(i).dead();
     }
+    float[] newcoords = new float[2];
+    newcoords[0]=x;
+    newcoords[1]=y;
+    coordinates.add(0,newcoords);
+    coordinates.remove(coordinates.size()-1);
   }
 }
