@@ -23,11 +23,15 @@ void draw(){
   snake.move(mouseX,mouseY);
   for (int i=0;i<food.size();i++){
     textSize(50);
-    text("testing: touching: "+food.get(i).touching(snake),100,300);
-    if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
-      food.remove(i);  
+    if (snake.touching(food.get(i))){
+      text("testing: touching: "+snake.touching(food.get(i)),100,300);food.remove(i);  
       Food newFood = new Food(random(height+200), random(width+450));
       food.add(food.size(),newFood);
     }
+    /*if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
+      food.remove(i);  
+      Food newFood = new Food(random(height+200), random(width+450));
+      food.add(food.size(),newFood);
+    }*/
   }
 }

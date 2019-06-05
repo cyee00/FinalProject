@@ -36,4 +36,9 @@ class Snake extends Thing{
     coordinates.add(0,newcoords);//add new set of coordinates to front so head can go there
     coordinates.remove(coordinates.size()-1);//cut off the last coordinates bc they won't be used anymore
   }
+  
+  boolean touching(Food food){
+    float[] firstcoords = coordinates.get(0);
+    return (dist(food.x,food.y,firstcoords[0],firstcoords[1])<=22.5);
+  }
 }
