@@ -7,6 +7,6 @@ class Food extends Thing{
     circle(this.x,this.y,15);
   }
   boolean touching(Snake snake){
-    return this.x==snake.x && this.y==snake.y;
+    return (dist(x,y,snake.x,snake.y)<=15);
   }
 }
