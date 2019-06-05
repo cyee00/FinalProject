@@ -1,8 +1,12 @@
 # FinalProject
 
 ## Project Description
+This is a recreation of the popular game Slither.io. The user controls a snake using their mouse
+and tries to consume all the Food. Once they consume all of it, they win! There is a tracker of
+how much food is left in the bottom right.
 
 ## Directions
+
 
 ## Development Log
 #### Monday, May 21st
