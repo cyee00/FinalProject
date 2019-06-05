@@ -14,7 +14,11 @@ class SnakePart extends Thing{
   }
   
   boolean dead(){
-    return (x>width-partsize||x<partsize)||(y>height-partsize||y<partsize);
+    if (x>width-partsize||x<partsize||y>height-partsize||y<partsize){
+      test();
+      return true;
+    }
+    return false;
   }
     
   void move(float[]coords){

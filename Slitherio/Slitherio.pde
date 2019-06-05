@@ -8,8 +8,8 @@ void setup(){
   toDisplay = new ArrayList<Displayable>();
   food = new ArrayList<Food>();
   snake.display();
-  for (int i = 0; i < 20; i++){
-    Food f = new Food(random(height), random(width));//generate 20 pieces of food at random places
+  for (int i = 0; i < 50; i++){
+    Food f = new Food(random(height+200), random(width+450));//generate 20 pieces of food at random places
     toDisplay.add(f);
     food.add(f);
   }
@@ -17,7 +17,7 @@ void setup(){
 
 void draw(){
   background(255); //make background white
-  for (Displayable obj : toDisplay){
+  for (Displayable obj : toDisplay){//display the Food
     obj.display();
   }
   snake.move(mouseX,mouseY);

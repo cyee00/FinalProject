@@ -29,13 +29,12 @@ class Snake extends Thing{
   void move(float x,float y){
     for (int i = 0; i < parts.size(); i++){
       parts.get(i).move(coordinates.get(i));
-      parts.get(i).dead();
     }
     float[] newcoords = new float[2];
     newcoords[0]=x;
     newcoords[1]=y;
-    coordinates.add(0,newcoords);
-    coordinates.remove(coordinates.size()-1);
+    coordinates.add(0,newcoords);//add new set of coordinates to front so head can go there
+    coordinates.remove(coordinates.size()-1);//cut off the end of the coordinates
   }
   
   boolean dead(){
