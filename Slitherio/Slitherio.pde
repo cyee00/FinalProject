@@ -17,16 +17,19 @@ void setup(){
 
 void draw(){
   background(255); //make background white
-  for (Displayable obj : toDisplay){//display the Food
+  for (Displayable obj : toDisplay){//display everything
     obj.display();
   }
-  snake.move(mouseX,mouseY);
-  if (snake.dead()){
+  snake.move(mouseX,mouseY);//make snake move by following mouse
+  if (snake.dead()){//check if snake has hit the walls of the window
     text("YOU HAVE DIED",height/2,width/2);
-    noLoop();
+    noLoop();//stop the code if snake has died
   }
-  for (Food f : food){
-    if (f.eaten(snake)){
+  for (int i=0;i<food.size();i++){
+    if (food.get(i).touching(snake)){//for each piece of food, check if it has been eaten by snake
+      food.remove(i);  
+      Food newFood = new Food(random(height+200), random(width+450));
+      food.add(food.size(),newFood);
     }
   }
 }

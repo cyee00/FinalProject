@@ -4,16 +4,9 @@ class Food extends Thing{
   }
   void display(){
     fill(R,G,B);
-    if (show){
-      circle(this.x,this.y,15);
-    } else {
-    }
+    circle(this.x,this.y,15);
   }
-  boolean eaten(Snake snake){
-    if (this.x==snake.x && this.y==snake.y){
-      show=false;
-      return false;
-    }
-    return true;
+  boolean touching(Snake snake){
+    return this.x==snake.x && this.y==snake.y;
   }
 }
