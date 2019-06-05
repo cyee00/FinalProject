@@ -6,6 +6,8 @@ class Food extends Thing{
     fill(R,G,B);
     if (show){
       circle(this.x,this.y,15);
+    } else {
+      fill(0,0,0);
     }
   }
   void eaten(Snake snake){

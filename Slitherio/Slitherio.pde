@@ -4,18 +4,18 @@ ArrayList<Moveable> toMove;
 Snake snake = new Snake(height/2,width/2);
 
 void setup(){
+  frameRate(10);
   size(1000,650);
   toDisplay = new ArrayList<Displayable>();
-  toMove = new ArrayList<Moveable>();
+  //toMove = new ArrayList<Moveable>();
   food = new ArrayList<Food>();
   snake.display();
-  toMove.add(snake);
+  //toMove.add(snake);
   for (int i = 0; i < 20; i++){
-    Food f = new Food(25+random(height), 25+random(width));
+    Food f = new Food(25+random(height), 25+random(width));//generate 20 pieces of food at random places
     toDisplay.add(f);
     food.add(f);
   }
-  //noLoop();
 }
 
 void draw(){
@@ -23,9 +23,10 @@ void draw(){
   for (Displayable obj : toDisplay){
     obj.display();
   }
-  for (Moveable obj : toMove){
+  /*for (Moveable obj : toMove){
     obj.move();
-  }
+  }*/
+  snake.move();
   /*for (Food f : food){
     f.eaten(snake);
   }*/

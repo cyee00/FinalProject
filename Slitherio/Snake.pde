@@ -19,17 +19,13 @@ class Snake extends Thing implements Moveable{
       coordinates.add(coords);
     }
   }
+  
   void display(){
-    /*SnakePart head = new SnakePart(x,y,R+100,G+100,B+100,.5);
-    parts.add(head);
-    for (int i = 0; i < 8; i++){
-      SnakePart sp = new SnakePart(parts.get(i).getX()+20,parts.get(i).getY()+20,R,G,B,.5+(.2*(i+1)));
-      parts.add(sp);
-    }*/
     for (int i = 0; i < parts.size(); i++){
       parts.get(i).display();
     }
   }
+  
   void move(){
     for (int i = 0; i < parts.size(); i++){
       parts.get(i).move();
