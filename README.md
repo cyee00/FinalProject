@@ -60,4 +60,6 @@
   * Continued working on keeping track of coordinates. Finally got Snake to move like I wanted it to!
   * Decided on appropriate framerate to make it move how I wanted it to.
   * Had to abandon snake dying after when it sides of window because there wasn't enough time.
-  * 
+  * Got the food to properly disappear when eaten.
+  * Implemented score feature that shows how much food is left.
+  * Implemented feature where if user eats all the food they win.
