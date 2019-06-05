@@ -55,3 +55,7 @@
   * Started scrapping my old method for making the snake move in favor of what Mr. K told me in class.
   * Made a new ArrayList to keep track of coordinates. Started working on setting setting the coordinates in the
     constructor, didn't finish.
+
+#### Tuesday, June 4th
+  * Continued working on keeping track of coordinates. Finally got Snake to move like I wanted it to!
+  * Decided on appropriate framerate to make it move how I wanted it to.
