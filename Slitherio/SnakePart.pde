@@ -17,6 +17,6 @@ class SnakePart extends Thing{
   }
     
   void move(float[]coords){
-    circle(coords[0],coords[1],partsize);
+    ellipse(coords[0],coords[1],partsize,partsize);
   }
 }

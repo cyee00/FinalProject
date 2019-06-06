@@ -6,7 +6,7 @@ class Food extends Thing{
   void display(){
     if (show){
     fill(R,G,B);
-    circle(this.x,this.y,15);
+    ellipse(this.x,this.y,15,15);
     }
   }
   void hide(){//when called, food should hide/not display anymore
